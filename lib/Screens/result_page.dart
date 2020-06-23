@@ -1,6 +1,6 @@
 import 'package:bodymassindex/constants.dart';
-import 'package:flutter/material.dart';
 import 'package:bodymassindex/Components/top_app_bar.dart';
+import 'package:flutter/material.dart';
 import 'package:bodymassindex/Components/bottom_button.dart';
 import 'package:bodymassindex/Components/reusable_card.dart';
 import 'package:flutter/services.dart';
@@ -95,6 +95,5 @@ class _ResultPageState extends State<ResultPage> {
         ),
       ),
     );
-    ;
   }
 }
