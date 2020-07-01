@@ -1,3 +1,4 @@
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:bodymassindex/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class BottomButton extends StatelessWidget {
       onTap: function,
       child: Container(
         width: double.infinity,
-        height: 52,
+        height: SizeConfig.safeBlockVertical * 7.5,
         color: toggledDarkTheme == true
             ? kMainAccentColorDark
             : kMainAccentColorLight,
@@ -26,9 +27,9 @@ class BottomButton extends StatelessWidget {
             '$buttonText',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: SizeConfig.safeBlockHorizontal * 5,
               fontWeight: FontWeight.bold,
-              letterSpacing: 5,
+              letterSpacing: SizeConfig.safeBlockHorizontal * 1.5,
             ),
           ),
         ),

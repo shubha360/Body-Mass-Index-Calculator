@@ -1,3 +1,4 @@
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:bodymassindex/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +18,13 @@ class RoundedButton extends StatelessWidget {
           ? kMainAccentColorDark
           : kMainAccentColorLight,
       shape: CircleBorder(),
-      constraints: BoxConstraints.tightFor(width: 40, height: 40),
+      constraints: BoxConstraints.tightFor(
+          width: SizeConfig.safeBlockHorizontal * 10,
+          height: SizeConfig.safeBlockVertical * 6),
       child: Icon(
         iconData,
         color: Colors.white,
-        size: 35,
+        size: SizeConfig.safeBlockHorizontal * 10,
       ),
       onPressed: buttonFunction,
     );

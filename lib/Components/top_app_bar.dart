@@ -1,3 +1,4 @@
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:bodymassindex/constants.dart';
 
@@ -19,7 +20,11 @@ class TopAppBar extends StatelessWidget {
     return Container(
       color:
           toggledDarkTheme == true ? kTopAppBarColorDark : kTopAppBarColorLight,
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+      padding: EdgeInsets.fromLTRB(
+          SizeConfig.safeBlockHorizontal * 5,
+          SizeConfig.safeBlockVertical * 2,
+          SizeConfig.safeBlockHorizontal * 5,
+          0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -34,20 +39,20 @@ class TopAppBar extends StatelessWidget {
                   style: TextStyle(
                     color:
                         toggledDarkTheme == true ? Colors.white : Colors.black,
-                    fontSize: 30,
+                    fontSize: SizeConfig.safeBlockHorizontal * 8,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 3,
+                    letterSpacing: SizeConfig.safeBlockHorizontal * .60,
                   ),
                 ),
                 SizedBox(
                   height: margin,
                 ),
                 Divider(
-                  height: 10,
+                  height: SizeConfig.safeBlockVertical * 1,
                   color: toggledDarkTheme == true
                       ? kMainAccentColorDark
                       : kMainAccentColorLight,
-                  thickness: 3,
+                  thickness: SizeConfig.safeBlockVertical * .40,
                   endIndent: dividerEndIndent,
                 ),
               ],

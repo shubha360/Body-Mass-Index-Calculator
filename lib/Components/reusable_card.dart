@@ -1,3 +1,4 @@
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:bodymassindex/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,8 @@ class ReusableCard extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 3),
+        padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 5),
         decoration: BoxDecoration(
             color: toggledDarkTheme == true ? kCardColorDark : kCardColorLight,
             borderRadius: BorderRadius.circular(10),
@@ -26,7 +27,6 @@ class ReusableCard extends StatelessWidget {
                       ? Colors.black.withOpacity(0.1)
                       : Colors.grey.withOpacity(0.1),
                   blurRadius: 10,
-                  spreadRadius: 0,
                   offset: Offset(0, 5))
             ]),
         child: cardChild,

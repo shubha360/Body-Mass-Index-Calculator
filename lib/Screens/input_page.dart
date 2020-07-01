@@ -1,4 +1,5 @@
 import 'package:bodymassindex/Screens/result_page.dart';
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:bodymassindex/calculator_brain.dart';
 import 'package:bodymassindex/constants.dart';
 import 'package:bodymassindex/Components/gender_card.dart';
@@ -8,7 +9,6 @@ import 'package:bodymassindex/Components/top_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bodymassindex/Components/bottom_button.dart';
-import 'package:bodymassindex/Components/gender_card.dart';
 import 'package:flutter/services.dart';
 
 enum Gender {
@@ -31,6 +31,7 @@ class _InputPageState extends State<InputPage> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
         statusBarColor: toggledDarkTheme == true
@@ -50,8 +51,8 @@ class _InputPageState extends State<InputPage> {
           children: <Widget>[
             TopAppBar(
               titleText: 'Body Mass Index Calculator',
-              margin: 10,
-              dividerEndIndent: 70,
+              margin: SizeConfig.safeBlockVertical * 1,
+              dividerEndIndent: SizeConfig.safeBlockHorizontal * 18,
               switchFunction: (newValue) {
                 setState(() {
                   toggledDarkTheme = newValue;
@@ -139,13 +140,13 @@ class _InputPageState extends State<InputPage> {
                           color: toggledDarkTheme == true
                               ? kNormalTextColorDark
                               : kNormalTextColorLight,
-                          fontSize: 15,
+                          fontSize: SizeConfig.safeBlockHorizontal * 4,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 2,
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: SizeConfig.safeBlockVertical * .8,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -156,12 +157,12 @@ class _InputPageState extends State<InputPage> {
                               color: toggledDarkTheme == true
                                   ? kMainAccentColorDark
                                   : kMainAccentColorLight,
-                              fontSize: 40,
+                              fontSize: SizeConfig.safeBlockHorizontal * 10,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(
-                            width: 5,
+                            width: SizeConfig.safeBlockHorizontal * 1,
                           ),
                           Text(
                             'inch',
@@ -203,13 +204,13 @@ class _InputPageState extends State<InputPage> {
                               color: toggledDarkTheme == true
                                   ? kNormalTextColorDark
                                   : kNormalTextColorLight,
-                              fontSize: 15,
+                              fontSize: SizeConfig.safeBlockHorizontal * 4,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
                             ),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: SizeConfig.safeBlockVertical * 1,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -220,7 +221,7 @@ class _InputPageState extends State<InputPage> {
                                   color: toggledDarkTheme == true
                                       ? kMainAccentColorDark
                                       : kMainAccentColorLight,
-                                  fontSize: 40,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 10,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -248,7 +249,7 @@ class _InputPageState extends State<InputPage> {
                                 },
                               ),
                               SizedBox(
-                                width: 10,
+                                width: SizeConfig.safeBlockVertical * 1,
                               ),
                               RoundedButton(
                                 iconData: Icons.add,
@@ -273,13 +274,13 @@ class _InputPageState extends State<InputPage> {
                               color: toggledDarkTheme == true
                                   ? kNormalTextColorDark
                                   : kNormalTextColorLight,
-                              fontSize: 15,
+                              fontSize: SizeConfig.safeBlockHorizontal * 4,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
                             ),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: SizeConfig.safeBlockVertical * 1,
                           ),
                           Row(
                             children: <Widget>[
@@ -289,12 +290,12 @@ class _InputPageState extends State<InputPage> {
                                   color: toggledDarkTheme == true
                                       ? kMainAccentColorDark
                                       : kMainAccentColorLight,
-                                  fontSize: 40,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 10,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               SizedBox(
-                                width: 5,
+                                width: SizeConfig.safeBlockHorizontal * 1,
                               ),
                               Text(
                                 'years',
@@ -317,7 +318,7 @@ class _InputPageState extends State<InputPage> {
                                 },
                               ),
                               SizedBox(
-                                width: 10,
+                                width: SizeConfig.safeBlockHorizontal * 1,
                               ),
                               RoundedButton(
                                 iconData: Icons.add,

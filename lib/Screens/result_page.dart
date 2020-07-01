@@ -1,3 +1,4 @@
+import 'package:bodymassindex/SizeConfig.dart';
 import 'package:bodymassindex/constants.dart';
 import 'package:bodymassindex/Components/top_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -38,8 +39,8 @@ class _ResultPageState extends State<ResultPage> {
           children: <Widget>[
             TopAppBar(
               titleText: 'Result',
-              margin: 10,
-              dividerEndIndent: 230,
+              margin: SizeConfig.safeBlockVertical * 1,
+              dividerEndIndent: SizeConfig.safeBlockHorizontal * 62,
               switchFunction: (newValue) {
                 setState(() {
                   toggledDarkTheme = newValue;
@@ -59,9 +60,9 @@ class _ResultPageState extends State<ResultPage> {
                         color: toggledDarkTheme
                             ? kNormalTextColorDark
                             : kNormalTextColorLight,
-                        fontSize: 20,
+                        fontSize: SizeConfig.safeBlockHorizontal * 5,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 5,
+                        letterSpacing: SizeConfig.safeBlockHorizontal * 1,
                       ),
                     ),
                     Text(
@@ -70,13 +71,13 @@ class _ResultPageState extends State<ResultPage> {
                         color: toggledDarkTheme == true
                             ? kLargeTextColorDark
                             : kLargeTextColorLight,
-                        fontSize: 100,
+                        fontSize: SizeConfig.safeBlockHorizontal * 30,
                       ),
                     ),
                     Text(
                       '${widget.interpretation}',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: SizeConfig.safeBlockHorizontal * 5,
                         color: toggledDarkTheme
                             ? kNormalTextColorDark
                             : kNormalTextColorLight,

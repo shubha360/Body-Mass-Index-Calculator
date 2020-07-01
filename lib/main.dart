@@ -1,7 +1,5 @@
-import 'package:bodymassindex/constants.dart';
 import 'package:bodymassindex/Screens/input_page.dart';
 import 'package:flutter/material.dart';
-import 'constants.dart';
 
 void main() {
   runApp(MainApp());
